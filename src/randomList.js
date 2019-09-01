@@ -10,7 +10,7 @@ export default function RandomList() {
       ...item,
       {
         id: item.length,
-        value: Math.random() * 100
+        value: Math.random() * 10
       }
     ]);
   };
