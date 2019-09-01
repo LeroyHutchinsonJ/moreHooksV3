@@ -1,13 +1,14 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function StepTracker() {
-  var [steps, StepTracker] = useState(0);
+  var [steps, stepTracker] = useState(0);
 
   return (
     <div>
       <div>I took {steps} steps today!</div>
-      <button style={buttonStyle}>I Took Another Step </button>
+      <button onClick={() => stepTracker((steps += 1))} style={buttonStyle}>
+        I Took Another Step{" "}
+      </button>
     </div>
   );
 }
