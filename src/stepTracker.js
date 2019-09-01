@@ -7,7 +7,7 @@ export default function StepTracker() {
   return (
     <div>
       <div>I took {steps} steps today!</div>
-      <button style={buttonStyle}>I Took Another Step</button>
+      <button style={buttonStyle}>I Took Another Step </button>
     </div>
   );
 }
