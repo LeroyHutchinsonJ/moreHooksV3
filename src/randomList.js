@@ -21,7 +21,7 @@ export default function RandomList() {
         Click me to increase the array number
       </button>
       <div>The list goes</div>
-
+      <br />
       <div>
         {item.map(num => (
           <div key={num.id}>{num.value}</div>
