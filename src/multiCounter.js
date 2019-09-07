@@ -14,7 +14,21 @@ export default function MultiCounter() {
   };
 
   var incB = () => {
-    setCounts({ ...counts, counts: counts.countB + 1 });
+    setCounts({ ...counts, countB: counts.countB + 1 });
   };
-  return <div>Check Check Check Me</div>;
+
+  //This is an example of what not to do when increasing values using hooks
+  var badIncA = () => {
+    setCounts({ countA: counts.countA + 1 });
+  };
+  return (
+    <div>
+      <button onClick={() => incA()}>Increase A</button>
+      <button onClick={() => incB()}>Increase B</button>
+      <button onClick={() => badIncA()}>Bad Increase A</button>
+      <br />
+      This is count A<div>{counts.countA}</div>
+      This is count B<div>{counts.countB}</div>
+    </div>
+  );
 }
