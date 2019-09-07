@@ -1,24 +1,29 @@
 import React, { useState } from "react";
 
 export default function AudioControlsB() {
-  var [volume, setVolume] = useState(85);
-  var [treble, setTreble] = useState(33);
   var [mid, setMid] = useState(71);
   var [bass, setBass] = useState(92);
+
+  var [sounds, setSounds] = useState({
+    volume: 85,
+    treble: 33,
+    mid: 71,
+    bass: 92
+  });
 
   return (
     <span>
       <div>
         <button
           style={buttonStyle}
-          onClick={() => setVolume((volume = volume + 1))}
+          onClick={() => setSounds({ ...sounds, volume: sounds.volume + 1 })}
         >
           <h3>+</h3>
         </button>
-        {volume} Volume
+        {sounds.volume} Volume
         <button
           style={buttonStyle}
-          onClick={() => setVolume((volume = volume - 1))}
+          onClick={() => setSounds({ ...sounds, volume: sounds.volume - 1 })}
         >
           <h3>-</h3>
         </button>
@@ -27,14 +32,14 @@ export default function AudioControlsB() {
       <div>
         <button
           style={buttonStyle}
-          onClick={() => setTreble((treble = treble + 1))}
+          onClick={() => setSounds({ ...sounds, treble: sounds.treble + 1 })}
         >
           <h3>+</h3>
         </button>
-        {treble} Treble
+        {sounds.treble} Treble
         <button
           style={buttonStyle}
-          onClick={() => setTreble((treble = treble - 1))}
+          onClick={() => setSounds({ ...sounds, treble: sounds.treble - 1 })}
         >
           <h3>-</h3>
         </button>
