@@ -19,6 +19,7 @@ export default function MultiCounter() {
 
   //This is an example of what not to do when increasing values using hooks
   var badIncA = () => {
+    //This is bad because it doesnt copy over countB in the update
     setCounts({ countA: counts.countA + 1 });
   };
   return (
