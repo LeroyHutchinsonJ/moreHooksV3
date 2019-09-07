@@ -9,7 +9,7 @@ import Room from "./room";
 function Index() {
   return (
     <div className="Index">
-      <Room />
+      <RandomList />
     </div>
   );
 }

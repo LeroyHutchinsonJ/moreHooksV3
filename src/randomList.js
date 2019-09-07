@@ -2,31 +2,21 @@ import React, { useState } from "react";
 
 export default function RandomList() {
   //Create an array, and a function to manipulate the array
-  var [item, setItem] = useState([]);
+  var [items, setItems] = useState([]);
 
-  //The addItem function copies the array and then adds one random number to the array with the ide equal to the array length
   var addItem = () => {
-    setItem([
-      ...item,
-      {
-        id: item.length,
-        value: Math.random() * 10
-      }
-    ]);
+    var random = Math.random() * 10;
+    setItems([...items, random]);
   };
+
+  var key = 0;
 
   return (
     <div>
-      <button onClick={() => addItem()}>
-        Click me to increase the array number
-      </button>
-      <div>The list goes</div>
-      <br />
-      <div>
-        {item.map(num => (
-          <div key={num.id}>{num.value}</div>
-        ))}
-      </div>
+      <button onClick={() => addItem()}>Add Number</button>
+      {items.map(item => (
+        <div key={key++}>{item}</div>
+      ))}
     </div>
   );
 }
