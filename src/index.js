@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import StepTracker from "./stepTracker";
 import "./styles.css";
 import RandomList from "./randomList";
+import MultiCounter from "./multiCounter";
 
 function Index() {
   return (
     <div className="Index">
-      <RandomList />
+      <MultiCounter />
     </div>
   );
 }

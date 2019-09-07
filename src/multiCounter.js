@@ -7,5 +7,11 @@ export default function MultiCounter() {
     countB: 0
   });
 
+  //Create a function named incA
+  var incA = () => {
+    //uses setCounts to set the value of counts to its current value but with 1 added to count A
+    setCounts({ ...counts, countA: counts.countA + 1 });
+  };
+
   return <div>Check Check Check Me</div>;
 }
