@@ -5,12 +5,12 @@ import "./styles.css";
 import RandomList from "./randomList";
 import MultiCounter from "./multiCounter";
 import Room from "./room";
-import AudioControls from "./audioControlsA";
-
+import AudioControlsA from "./audioControlsA";
+import AudioControlsB from "./audioControlsB";
 function Index() {
   return (
     <div className="Index">
-      <AudioControls />
+      <AudioControlsB />
     </div>
   );
 }

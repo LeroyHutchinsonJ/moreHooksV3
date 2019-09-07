@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function AudioControlsA() {
+export default function AudioControlsB() {
   var [volume, setVolume] = useState(85);
   var [treble, setTreble] = useState(33);
   var [mid, setMid] = useState(71);
