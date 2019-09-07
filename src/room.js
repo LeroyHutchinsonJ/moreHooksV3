@@ -9,8 +9,16 @@ export default function Room() {
 
   return (
     <div>
-      <div>{text}</div>
+      <div style={light ? lightOn : lightOff}>{text}</div>
       <button onClick={() => setLight(!light)}>Touch me to switch light</button>
     </div>
   );
 }
+
+var lightOn = {
+  background: "white"
+};
+var lightOff = {
+  background: "black",
+  color: "white"
+};
