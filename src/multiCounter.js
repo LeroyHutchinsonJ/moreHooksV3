@@ -13,5 +13,8 @@ export default function MultiCounter() {
     setCounts({ ...counts, countA: counts.countA + 1 });
   };
 
+  var incB = () => {
+    setCounts({ ...counts, counts: counts.countB + 1 });
+  };
   return <div>Check Check Check Me</div>;
 }
