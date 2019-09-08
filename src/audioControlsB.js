@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
 export default function AudioControlsB() {
-  var [mid, setMid] = useState(71);
-  var [bass, setBass] = useState(92);
-
   var [sounds, setSounds] = useState({
     volume: 85,
     treble: 33,
@@ -46,21 +43,33 @@ export default function AudioControlsB() {
       </div>
 
       <div>
-        <button style={buttonStyle} onClick={() => setMid((mid = mid + 1))}>
+        <button
+          style={buttonStyle}
+          onClick={() => setSounds({ ...sounds, mid: sounds.mid + 1 })}
+        >
           <h3>+</h3>
         </button>
-        {mid} Mid
-        <button style={buttonStyle} onClick={() => setMid((mid = mid - 1))}>
+        {sounds.mid} Mid
+        <button
+          style={buttonStyle}
+          onClick={() => setSounds({ ...sounds, mid: sounds.mid - 1 })}
+        >
           <h3>-</h3>
         </button>
       </div>
 
       <div>
-        <button style={buttonStyle} onClick={() => setBass((bass = bass + 1))}>
+        <button
+          style={buttonStyle}
+          onClick={() => setSounds({ ...sounds, bass: sounds.bass + 1 })}
+        >
           <h3>+</h3>
         </button>
-        {bass} Bass
-        <button style={buttonStyle} onClick={() => setBass((bass = bass - 1))}>
+        {sounds.bass} Bass
+        <button
+          style={buttonStyle}
+          onClick={() => setSounds({ ...sounds, bass: sounds.bass - 1 })}
+        >
           <h3>-</h3>
         </button>
       </div>

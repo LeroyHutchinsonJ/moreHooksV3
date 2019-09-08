@@ -7,10 +7,12 @@ import MultiCounter from "./multiCounter";
 import Room from "./room";
 import AudioControlsA from "./audioControlsA";
 import AudioControlsB from "./audioControlsB";
+import AudioControlsWithOneObject from "./audioControlsExample";
+
 function Index() {
   return (
     <div className="Index">
-      <AudioControlsB />
+      <AudioControlsWithOneObject />
     </div>
   );
 }
