@@ -1,0 +1,10 @@
+.mainControlBox {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.sideControlBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./audioControlsB.css";
 
 export default function AudioControlsB() {
   var [sounds, setSounds] = useState({
@@ -9,71 +10,76 @@ export default function AudioControlsB() {
   });
 
   return (
-    <span>
+    <>
       <div>
-        <button
-          style={buttonStyle}
-          onClick={() => setSounds({ ...sounds, volume: sounds.volume + 1 })}
-        >
-          <h3>+</h3>
-        </button>
-        {sounds.volume} Volume
-        <button
-          style={buttonStyle}
-          onClick={() => setSounds({ ...sounds, volume: sounds.volume - 1 })}
-        >
-          <h3>-</h3>
-        </button>
-      </div>
+        <div className="mainControlBox">
+          <button
+            style={buttonStyle}
+            onClick={() => setSounds({ ...sounds, volume: sounds.volume + 1 })}
+          >
+            <h3>+</h3>
+          </button>
+          <div className="sideControlBox">
+            <div>{sounds.volume}</div>
+            <div>Volume</div>{" "}
+          </div>
+          <button
+            style={buttonStyle}
+            onClick={() => setSounds({ ...sounds, volume: sounds.volume - 1 })}
+          >
+            <h3>-</h3>
+          </button>
+        </div>
 
-      <div>
-        <button
-          style={buttonStyle}
-          onClick={() => setSounds({ ...sounds, treble: sounds.treble + 1 })}
-        >
-          <h3>+</h3>
-        </button>
-        {sounds.treble} Treble
-        <button
-          style={buttonStyle}
-          onClick={() => setSounds({ ...sounds, treble: sounds.treble - 1 })}
-        >
-          <h3>-</h3>
-        </button>
-      </div>
+        <div>
+          <button
+            style={buttonStyle}
+            onClick={() => setSounds({ ...sounds, treble: sounds.treble + 1 })}
+          >
+            <h3>+</h3>
+          </button>
+          {sounds.treble} Treble
+          <button
+            style={buttonStyle}
+            onClick={() => setSounds({ ...sounds, treble: sounds.treble - 1 })}
+          >
+            <h3>-</h3>
+          </button>
+        </div>
 
-      <div>
-        <button
-          style={buttonStyle}
-          onClick={() => setSounds({ ...sounds, mid: sounds.mid + 1 })}
-        >
-          <h3>+</h3>
-        </button>
-        {sounds.mid} Mid
-        <button
-          style={buttonStyle}
-          onClick={() => setSounds({ ...sounds, mid: sounds.mid - 1 })}
-        >
-          <h3>-</h3>
-        </button>
-      </div>
+        <div>
+          <button
+            style={buttonStyle}
+            onClick={() => setSounds({ ...sounds, mid: sounds.mid + 1 })}
+          >
+            <h3>+</h3>
+          </button>
+          {sounds.mid} Mid
+          <button
+            style={buttonStyle}
+            onClick={() => setSounds({ ...sounds, mid: sounds.mid - 1 })}
+          >
+            <h3>-</h3>
+          </button>
+        </div>
 
-      <div>
-        <button
-          style={buttonStyle}
-          onClick={() => setSounds({ ...sounds, bass: sounds.bass + 1 })}
-        >
-          <h3>+</h3>
-        </button>
-        {sounds.bass} Bass
-        <button
-          style={buttonStyle}
-          onClick={() => setSounds({ ...sounds, bass: sounds.bass - 1 })}
-        >
-          <h3>-</h3>
-        </button>
+        <div>
+          <button
+            style={buttonStyle}
+            onClick={() => setSounds({ ...sounds, bass: sounds.bass + 1 })}
+          >
+            <h3>+</h3>
+          </button>
+          {sounds.bass} Bass
+          <button
+            style={buttonStyle}
+            onClick={() => setSounds({ ...sounds, bass: sounds.bass - 1 })}
+          >
+            <h3>-</h3>
+          </button>
+        </div>
       </div>
-    </span>
+    </>
   );
 }
 

@@ -12,7 +12,7 @@ import AudioControlsWithOneObject from "./audioControlsExample";
 function Index() {
   return (
     <div className="Index">
-      <AudioControlsWithOneObject />
+      <AudioControlsB />
     </div>
   );
 }
