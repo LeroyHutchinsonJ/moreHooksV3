@@ -8,11 +8,12 @@ import Room from "./room";
 import AudioControlsA from "./audioControlsA";
 import AudioControlsB from "./audioControlsB";
 import AudioControlsWithOneObject from "./audioControlsExample";
+import InputExample from "./controlledInput";
 
 function Index() {
   return (
     <div className="Index">
-      <AudioControlsB />
+      <InputExample />
     </div>
   );
 }
