@@ -31,14 +31,18 @@ export default function AudioControlsB() {
           </button>
         </div>
 
-        <div>
+        <div className="mainControlBox">
           <button
             style={buttonStyle}
             onClick={() => setSounds({ ...sounds, treble: sounds.treble + 1 })}
           >
             <h3>+</h3>
           </button>
-          {sounds.treble} Treble
+          <div className="sideControlBox">
+            <div>{sounds.treble}</div>
+            <div>Treble</div>
+          </div>
+
           <button
             style={buttonStyle}
             onClick={() => setSounds({ ...sounds, treble: sounds.treble - 1 })}
@@ -47,14 +51,18 @@ export default function AudioControlsB() {
           </button>
         </div>
 
-        <div>
+        <div className="mainControlBox">
           <button
             style={buttonStyle}
             onClick={() => setSounds({ ...sounds, mid: sounds.mid + 1 })}
           >
             <h3>+</h3>
           </button>
-          {sounds.mid} Mid
+          <div className="sideControlBox">
+            <div>{sounds.mid}</div>
+            <div>Mid</div>
+          </div>
+
           <button
             style={buttonStyle}
             onClick={() => setSounds({ ...sounds, mid: sounds.mid - 1 })}
@@ -63,14 +71,18 @@ export default function AudioControlsB() {
           </button>
         </div>
 
-        <div>
+        <div className="mainControlBox">
           <button
             style={buttonStyle}
             onClick={() => setSounds({ ...sounds, bass: sounds.bass + 1 })}
           >
             <h3>+</h3>
           </button>
-          {sounds.bass} Bass
+          <div className="sideControlBox">
+            <div>{sounds.bass}</div>
+            <div>Bass</div>
+          </div>
+
           <button
             style={buttonStyle}
             onClick={() => setSounds({ ...sounds, bass: sounds.bass - 1 })}
