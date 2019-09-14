@@ -4,12 +4,17 @@ var InputExample = () => {
   var [text, setText] = useState("");
 
   var handleChange = event => {
-    setText(event.target.value);
+   var text = event.target.value;
+
+   setText(
+     text.replace(/[0-9]/g, '')
+     )
+
   };
 
   return (
     <div>
-      <input type="text" value={text} onChange={handleChange} />
+      <input type="text"  value={text} onChange={handleChange}/>
     </div>
   );
 };
