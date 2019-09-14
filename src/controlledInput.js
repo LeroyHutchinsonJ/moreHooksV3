@@ -11,6 +11,9 @@ var InputExample = () => {
   return(
   <div>
   <input type = "text" ref = {input}/>
+
+
+  
   <button onClick = {showValue}>
   Alert The Value!
   </button>
