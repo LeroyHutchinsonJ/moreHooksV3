@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 var InputExample = () => {
-  var [text, setText] = useState("");
 
-  var handleChange = event => {
-   var text = event.target.value;
+  var input = useRef();
 
-   setText(
-     text.replace(/[0-9]/g, '')
-     )
+  var showValue = () => {
+    alert(`Input contains: ${input.current.value}`);
+  }
 
-  };
-
-  return (
-    <div>
-      <input type="text"  value={text} onChange={handleChange}/>
-    </div>
-  );
-};
+  return(
+  <div>
+  <input type = "text" ref = {input}/>
+  <button onClick = {showValue}>
+  Alert The Value!
+  </button>
+  </div>)
+}
 
 export default InputExample;
