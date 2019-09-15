@@ -10,13 +10,15 @@ import AudioControlsB from "./audioControlsB";
 import AudioControlsWithOneObject from "./audioControlsExample";
 import InputExample from "./controlledInput";
 import InputBox from "./inputBox";
+import InputBoxUncontrolled from "./inputBoxUncontrolled";
+
 function Index() {
   return (
     <div className="Index">
-      <InputBox />
+      <InputBoxUncontrolled />
     </div>
   );
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<InputBox />, rootElement);
+ReactDOM.render(<InputBoxUncontrolled />, rootElement);
