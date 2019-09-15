@@ -1,20 +1,22 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
 var InputBox = () => {
-  var first = useRef("");
-  var last = useRef("");
+  var [fname, setFname] = useState("");
+  var [lname, setLname] = useState("");
 
   return (
     <div>
       <div>
-        Input Your First Name <input type="text" ref={first} />
+        Input Your First Name{" "}
+        <input type="text" onChange={event => setFname(event.target.value)} />
       </div>
       <br />
       <div>
-        Input Your Last Name <input type="text" ref={last} />
+        Input Your Last Name{" "}
+        <input type="text" onChange={event => setLname(event.target.value)} />
       </div>
       <br />
-      Hello, {first.current.value} {last.current.value}
+      Hello, {fname} {lname}
     </div>
   );
 };
