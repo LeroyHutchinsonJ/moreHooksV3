@@ -9,14 +9,14 @@ import AudioControlsA from "./audioControlsA";
 import AudioControlsB from "./audioControlsB";
 import AudioControlsWithOneObject from "./audioControlsExample";
 import InputExample from "./controlledInput";
-
+import InputBox from "./inputBox";
 function Index() {
   return (
     <div className="Index">
-      <InputExample />
+      <InputBox />
     </div>
   );
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Index />, rootElement);
+ReactDOM.render(<InputBox />, rootElement);
