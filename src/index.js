@@ -11,14 +11,15 @@ import AudioControlsWithOneObject from "./audioControlsExample";
 import InputExample from "./controlledInput";
 import InputBox from "./inputBox";
 import InputBoxUncontrolled from "./inputBoxUncontrolled";
+import RadioButtonExample from "./radioButtons";
 
 function Index() {
   return (
     <div className="Index">
-      <InputBoxUncontrolled />
+      <RadioButtonExample />
     </div>
   );
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<InputBoxUncontrolled />, rootElement);
+ReactDOM.render(<RadioButtonExample />, rootElement);
