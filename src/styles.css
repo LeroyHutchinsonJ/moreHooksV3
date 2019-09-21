@@ -2,3 +2,20 @@
   font-family: sans-serif;
   text-align: center;
 }
+.pizzaSizes {
+  display: flex;
+}
+
+.pizzaSizes > div {
+  margin-right: 5px;
+  position: relative;
+  font-family: "Josefin Slab", sans-serif;
+  font-weight: bold;
+}
+
+.pizzaSizes > div > input:hover {
+  cursor: pointer;
+}
+.pizzaForm > div {
+  font-family: "Josefin Slab", sans-serif;
+}
