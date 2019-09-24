@@ -12,14 +12,15 @@ import InputExample from "./controlledInput";
 import InputBox from "./inputBox";
 import InputBoxUncontrolled from "./inputBoxUncontrolled";
 import RadioButtonExample from "./radioButtons";
+import Counter from "./useReduce";
 
 function Index() {
   return (
     <div className="Index">
-      <RadioButtonExample />
+      <Counter />
     </div>
   );
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<RadioButtonExample />, rootElement);
+ReactDOM.render(<Index />, rootElement);
