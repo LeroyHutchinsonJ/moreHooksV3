@@ -61,7 +61,7 @@ var RadioButtonExample = () => {
 
       <div>
         <div>Special Instructions</div>
-        <input />
+        <textarea />
       </div>
       <br />
       <button>Send Order</button>
